@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>simple model controller</title>
+		<link type="text/css" rel="stylesheet" href="css/common.css">
+				     
+		<script src="js/angular.min.js"></script>
+      	<script src="js/app-2/app-2.js"></script>
+	</head>
+	<body>
+		<div ng-app ng-controller="GreetingCtrl">
+			Stelle Dich vor: <input type="text" value="" ng-model="name">
+			<div>Hallo <span>{{name}}</span>! Du bist sicher <span>{{getSex()}}</span>.</div>
+		</div>
+	</body>
+</html>
