@@ -1,5 +1,11 @@
+html {
+	width: 100%;
+	height: 100%;
+}
+
 body {
-	font-size: 16pt;
+	font-size: 20pt;
+	text-align: center;
 }
 
 span {

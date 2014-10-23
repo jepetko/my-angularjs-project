@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>app_4</title>
+		<link type="text/css" rel="stylesheet" href="css/common.css">
+				     
+		<script src="js/angular.min.js"></script>
+      	<script src="js/app-4/FilterCtrl.js"></script>
+	</head>
+	<body ng-app="MyApp">
+		<div ng-controller="FilterCtrl">
+			<select ng-model="country" ng-options="country.name for country in countries"></select>	
+			<div><span>Sie haben ausgew&auml;hlt: {{country.name | reverse}}</span></div>
+		</div>
+	</body>
+</html>
