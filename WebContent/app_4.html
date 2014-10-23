@@ -11,7 +11,7 @@
 	<body ng-app="MyApp">
 		<div ng-controller="FilterCtrl">
 			<select ng-model="country" ng-options="country.name for country in countries"></select>	
-			<div><span>Sie haben ausgew&auml;hlt: {{country.name | reverse}}</span></div>
+			<div><span>Sie haben ausgew&auml;hlt: {{country.name | decorate}}</span></div>
 		</div>
 	</body>
 </html>
