@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>app_7</title>
+		<link type="text/css" rel="stylesheet" href="css/common.css">
+		<style type="text/css">
+			.fruit {
+				height: 200px; 
+				width: 200px; 
+				display: inline-block;
+				-webkit-background-size: contain;
+			    -moz-background-size: contain;
+			    -o-background-size: contain;
+			    background-size: contain;
+			    border: 1px solid black;
+			}
+		</style>		     
+		<script src="js/jquery-1.11.1.min.js"></script>				    
+		<script src="js/angular.min.js"></script>
+      	<script src="js/app-7/FruitsApp.js"></script>
+	</head>
+	<body ng-app="FruitsApp" ng-controller="FruitsCtrl">
+		
+		<input type="button" ng-click="clear()" value='Alle Fr&uuml;chte l&ouml;schen'>
+		<input type="button" ng-click="select('first')" value='Erste Frucht ausw&auml;hlen'>
+		<input type="button" ng-click="select('last')" value='Letzte Frucht ausw&auml;hlen'>
+		<input type="button" ng-click="select('all')" value='Alle Fr&uuml;chte ausw&auml;hlen'>
+		
+		<br>
+		<div ng-repeat="fruit in selectedFruits track by $index"
+		    class="fruit"
+			style="background: url(img/{{fruit}}.png) no-repeat;">
+		</div>
+	</body>
+</html>
