@@ -1,3 +1,5 @@
+"use strict";
+
 function ClickCtrl($scope) {
 	
 	$scope.init = function() {
