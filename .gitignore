@@ -3,3 +3,5 @@
 build
 .settings
 .tern-project
+runner/node_modules
+runner/npm-debug.log
