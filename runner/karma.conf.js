@@ -13,8 +13,13 @@ module.exports = function(config) {
 
         // list of files / patterns to load in the browser
         files: [
+            'js/angular.min.js',
+            'js/angular-mocks.js',
+            'js/jquery-1.11.1.min.js',
             'js/dummy-0/counter.js',
-            'tests/counter.test.js'
+            'js/app-7/FruitsApp.js',
+            'tests/counter.test.js',
+            'tests/FruitsApp.test.js'
         ],
 
 
@@ -42,7 +47,7 @@ module.exports = function(config) {
 
         // level of logging
         // possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
-        logLevel: config.LOG_DEBUG,
+        logLevel: config.LOG_INFO,
 
 
         // enable / disable watching file and executing tests whenever any file changes
