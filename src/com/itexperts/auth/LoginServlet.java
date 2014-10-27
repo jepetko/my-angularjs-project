@@ -1,7 +1,6 @@
 package com.itexperts.auth;
 
 import java.io.IOException;
-import java.io.PrintWriter;
  
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -28,10 +27,12 @@ public class LoginServlet extends HttpServlet {
         User user = UsersDao.instance.query(login, password);         
         if(user != null) {
             HttpSession session = request.getSession();
-            session.setAttribute("user", login);
+            session.setAttribute("login", login);            
             session.setMaxInactiveInterval(30*60); //session dauert 30 Minuten
+            
             Cookie loginCookie = new Cookie("login", login);
             response.addCookie(loginCookie);
+            
             //Get the encoded URL string
             String encodedURL = response.encodeRedirectURL("app.jsp");
             response.sendRedirect(encodedURL);

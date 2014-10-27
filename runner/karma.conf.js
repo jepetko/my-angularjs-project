@@ -2,7 +2,7 @@
 module.exports = function(config) {
 	
     config.set({
-
+    	
         // base path, that will be used to resolve files and exclude
         basePath: '../WebContent',
 
@@ -16,9 +16,9 @@ module.exports = function(config) {
             'js/angular.min.js',
             'js/angular-mocks.js',
             'js/jquery-1.11.1.min.js',
-            'js/dummy-0/counter.js',
+            //code:
             'js/app-7/FruitsApp.js',
-            'tests/counter.test.js',
+            //test cases:
             'tests/FruitsApp.test.js'
         ],
 

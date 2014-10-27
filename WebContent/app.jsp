@@ -1,3 +1,23 @@
+<%
+	if (session.getAttribute("login") == null) {
+		response.sendRedirect("login.html");
+	}
+
+	String login = null;
+	String sessID = null;
+	Cookie[] cookies = request.getCookies();
+	if (cookies != null) {
+		for (Cookie cookie : cookies) {
+			if (cookie.getName().equals("login"))
+				login = cookie.getValue();
+			if (cookie.getName().equals("JSESSIONID"))
+				sessID = cookie.getValue();
+		}
+	} else {
+		login = (String) session.getAttribute("login");
+		sessID = session.getId();
+	}
+%>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -15,7 +35,9 @@
 		<script src="js/app-n/application.js"></script>
 		
 	</head>
-	<body id="mainApp">
-		<div data-ng-controller="UsersController">{{currentUser}}</div>		
+	<body id="mainApp">	
+		<div data-ng-controller="UsersController" data-ng-init="init('<%=login%>', '<%=sessID%>')">
+			{{currentUser}}
+		</div>		
 	</body>
 </html>
