@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>app_9</title>
+		<link type="text/css" rel="stylesheet" href="css/common.css">
+		<style type="text/css">
+
+			.ui-window {	
+				min-width: 300px;
+				min-height: 200px;	
+				display: inline-block;
+			}		
+			
+			.ui-window-header {
+				background: grey;
+				font-weight: bold;			
+			}
+			
+			.ui-window-close {
+				font-size: 8pt;
+				border-radius: 50%;
+				-ie-border-radius: 50%;
+				-moz-border-radius: 50%;
+				-chrome-border-radius: 50%;
+				padding: 8px;
+				background: black;
+				color: white;
+				display: inline-block;
+				float: right;
+				cursor: pointer;
+			}
+			
+			.ui-window-content {
+				padding: 5px;
+				background: lightgrey;
+				height: 100%;
+			}
+		</style>		     
+		<script src="js/jquery-1.11.1.min.js"></script>				    
+		<script src="js/angular.js"></script>
+      	<script src="js/app-9/TaskbarAndWindowDirective.js"></script>
+	</head>
+	<body ng-app="ui">
+		<task-bar>			
+		</task-bar>
+		<ext-window window-title="Info">
+			Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+		</ext-window>		
+		<ext-window window-title="Warnung">
+			Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+		</ext-window>				
+	</body>
+</html>
