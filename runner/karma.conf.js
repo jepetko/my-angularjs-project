@@ -18,8 +18,10 @@ module.exports = function(config) {
             'js/jquery-1.11.1.min.js',
             //code:
             'js/app-7/FruitsApp.js',
+            'js/app-8/WindowDirective.js',
             //test cases:
-            'tests/FruitsApp.test.js'
+            'tests/FruitsApp.test.js',
+            'tests/WindowDirective.test.js'
         ],
 
 

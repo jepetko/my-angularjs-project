@@ -13,7 +13,7 @@ angular.module('ui', [])
 		restrict: 'E',
 		transclude: true,
 		template: '<div class="ui-window">\
-			<div class="ui-window-header">{{windowTitle}}<div class="ui-window-close" ng-click="close()">X</div></div>\
+			<div class="ui-window-header"><span>{{windowTitle}}</span><div class="ui-window-close" ng-click="close()">X</div></div>\
 			<div class="ui-window-content" ng-transclude></div>\
 			</div>',
 		link: link
