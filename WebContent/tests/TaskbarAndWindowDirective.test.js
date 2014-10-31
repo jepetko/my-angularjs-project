@@ -49,10 +49,10 @@ describe('ui', function() {
 			taskBar = compileTpl(tpl);
 			//debugger;
 			console.log(scope.titles);
-			var j = 0;
+			var i = 0;
 			angular.forEach($(taskBar).find('p li'), function(li) {
-				expect($(li).text()).toBe('Window ' + j);
-				j++;
+				expect($(li).text()).toBe('Window ' + i);
+				i++;
 			});
 		});
 	});	
