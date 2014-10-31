@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>app_10</title>
+		<link type="text/css" rel="stylesheet" href="css/common.css">		     
+		<script src="js/jquery-1.11.1.min.js"></script>				    
+		<script src="js/angular.js"></script>
+      	<script src="js/app-10/HttpService.js"></script>
+      	<style type="text/css">
+      		.red {
+      			color: #f00;
+      		}
+      		
+      		.green {
+      			color: #0f0;
+      		}
+      	</style>
+	</head>
+	<body ng-app="http-services">
+		<div ng-controller="DataGrabberCtrl">
+			<div ng-class="{red: status == 'error', green: status == 'success'}">{{status}}</div>
+			<div>{{data}}</div>
+		</div>
+	</body>
+</html>

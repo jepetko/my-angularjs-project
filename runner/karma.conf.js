@@ -20,10 +20,12 @@ module.exports = function(config) {
             'js/app-7/FruitsApp.js',
             //'js/app-8/WindowDirective.js',
             'js/app-9/TaskbarAndWindowDirective.js',
+            'js/app-10/HttpService.js',
             //test cases:
             'tests/FruitsApp.test.js',
             //'tests/WindowDirective.test.js',
-            'tests/TaskbarAndWindowDirective.test.js'
+            'tests/TaskbarAndWindowDirective.test.js',
+            'tests/HttpService.test.js'
         ],
 
 
