@@ -13,15 +13,17 @@ module.exports = function(config) {
 
         // list of files / patterns to load in the browser
         files: [
-            'js/angular.min.js',
+            'js/angular.js',
             'js/angular-mocks.js',
             'js/jquery-1.11.1.min.js',
             //code:
             'js/app-7/FruitsApp.js',
-            'js/app-8/WindowDirective.js',
+            //'js/app-8/WindowDirective.js',
+            'js/app-9/TaskbarAndWindowDirective.js',
             //test cases:
             'tests/FruitsApp.test.js',
-            'tests/WindowDirective.test.js'
+            //'tests/WindowDirective.test.js',
+            'tests/TaskbarAndWindowDirective.test.js'
         ],
 
 
@@ -64,7 +66,8 @@ module.exports = function(config) {
         // - Safari (only Mac; has to be installed with `npm install karma-safari-launcher`)
         // - PhantomJS
         // - IE (only Windows; has to be installed with `npm install karma-ie-launcher`)
-        browsers: ['PhantomJS'],
+//        browsers: ['PhantomJS'],
+        browsers: ['Chrome'],
 
 
         // If browser does not capture in given timeout [ms], kill it

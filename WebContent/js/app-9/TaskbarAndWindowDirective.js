@@ -1,6 +1,6 @@
 var mod = angular.module('ui', []);
 
-mod.controller('taskBarCtrl', function($scope, $element, $attrs) {
+mod.controller('taskBarCtrl', function($scope) {
 	
 	$scope.titles = [];
 	
@@ -9,16 +9,14 @@ mod.controller('taskBarCtrl', function($scope, $element, $attrs) {
 	};
 	
 	this.removeTitle = function(t) {
-		console.log(t);
+		//console.log(t);
 		$scope.titles = jQuery.grep($scope.titles, function(title) {
 			return t != title;
 		});	
-		console.log($scope.titles);
+		//console.log($scope.titles);
 	};
 	
-});
-
-mod.directive('taskBar', function() {
+}).directive('taskBar', function() {
 	
 	var link = function(scope, el, attrs, taskBarCtrl) {	
 		//taskBarCtrl.addTitle('ttt');
@@ -33,9 +31,7 @@ mod.directive('taskBar', function() {
 		template: '<p><ul><li ng-repeat="t in titles">{{t}}</li></ul> <div ng-transclude></div> </p>',
 		link: link
 	};
-});
-
-mod.directive('extWindow', function() {	
+}).directive('extWindow', function() {	
 	
 	return {
 		scope: {},
