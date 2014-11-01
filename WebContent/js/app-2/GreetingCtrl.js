@@ -1,7 +1,7 @@
 (function() {
 	"use strict";
 
-	var app = angular.module('app', [])
+	angular.module('app', [])
 	.controller('GreetingCtrl', function($scope) {
 		$scope.names = {
 				kati: 'F',

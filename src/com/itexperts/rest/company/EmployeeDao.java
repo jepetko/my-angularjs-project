@@ -15,9 +15,9 @@ public enum EmployeeDao {
 		Random random = new Random();
 		DataFactory df = new DataFactory();
 		for(int i=0; i<50; i++) {
-			Department department = Department.values()[random.nextInt(2)];
+			Department department = Department.values()[random.nextInt(3)];
 			int ranking = random.nextInt(100);
-			list.add(new Employee(df.getFirstName(), df.getLastName(), department, ranking));
+			list.add(new Employee(i+1, df.getFirstName(), df.getLastName(), department, ranking));
 		}
 	}
 	
