@@ -14,7 +14,7 @@ angular.module('http-services', [])
 			$scope.status = 'error';
 			$scope.data = 'no data';
 		});
-	}
+	};
 	
 	$scope.load();
 }]);

@@ -39,17 +39,18 @@ mod.controller('taskBarCtrl', function($scope) {
 		require: '^?taskBar',
 		restrict: 'E',
 		transclude: true,
+		/*jshint multistr: true */
 		template: '<div class="ui-window">\
 			<div class="ui-window-header"><span>{{windowTitle}}</span><div class="ui-window-close" ng-click="close()">X</div></div>\
 			<div class="ui-window-content" ng-transclude></div>\
 			</div>',
 		link: function(scope, element, attrs, taskBarCtrl) {
-			scope.windowTitle = attrs['windowTitle'];	
+			scope.windowTitle = attrs.windowTitle;	
 			scope.close = function() {
 				$(element).css('display', 'none');
 				taskBarCtrl.removeTitle(scope.windowTitle);
-			}
+			};
 			taskBarCtrl.addTitle(scope.windowTitle);
 		}
-	}
+	};
 });
