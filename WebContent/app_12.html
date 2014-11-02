@@ -14,14 +14,27 @@
 		<script src="js/app-12/ShoppingBagCtrl.js"></script>
 		<script src="js/app-12/WizardDirective.js"></script>
 		<script src="js/app-12/ShoppingApp.js"></script>	
-		<script src="js/app-12/Bootstrap.js"></script>			
+		<script src="js/app-12/Bootstrap.js"></script>		
+		
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
 
-      	<style type="text/css">
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap-theme.min.css">
 
-      	</style>
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="vendor/bootstrap/js/bootstrap.min.js"></script>	
+		
+		<link rel="stylesheet" href="css/shopping-app.css">
+		
 	</head>
-	<body id="shopping-app">
-		<wizard></wizard>
-		<ng-view></ng-view>	
+	<body id="shopping-app">	
+		<div class="panel panel-default">
+			<div class="panel-heading">Awesome pizzeria shop</div>
+			<div class="panel-body">
+				<wizard></wizard>
+				<ng-view></ng-view>
+			</div>
+		</div>
 	</body>
 </html>
