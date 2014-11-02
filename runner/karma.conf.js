@@ -15,6 +15,7 @@ module.exports = function(config) {
         files: [
             'js/angular.js',
             'js/angular-resource.js',
+            'js/angular-route.js',
             'js/angular-mocks.js',
             'js/jquery-1.11.1.min.js',
             //code:
@@ -23,12 +24,22 @@ module.exports = function(config) {
             'js/app-9/TaskbarAndWindowDirective.js',
             'js/app-10/HttpService.js',
             'js/app-11/RestService.js',
+            //app-12:
+//            'js/app-12/OrderCtrl.js',
+            'js/app-12/ProductsCtrl.js',
+            'js/app-12/ProductsFactory.js',
+            'js/app-12/ShoppingApp.js',
+//            'js/app-12/ShoppingBagCtrl.js',
+            'js/app-12/WizardDirective.js',
+            
             //test cases:
             'tests/FruitsApp.test.js',
             //'tests/WindowDirective.test.js',
             'tests/TaskbarAndWindowDirective.test.js',
             'tests/HttpService.test.js',
-            'tests/RestService.test.js'
+            'tests/RestService.test.js',            
+            //app-12:
+            'tests/app-12/*.test.js'
         ],
 
 
@@ -71,8 +82,8 @@ module.exports = function(config) {
         // - Safari (only Mac; has to be installed with `npm install karma-safari-launcher`)
         // - PhantomJS
         // - IE (only Windows; has to be installed with `npm install karma-ie-launcher`)
-        //browsers: ['PhantomJS'],
-        browsers: ['Chrome'],
+        browsers: ['PhantomJS'],
+        //browsers: ['Chrome'],
 
 
         // If browser does not capture in given timeout [ms], kill it
