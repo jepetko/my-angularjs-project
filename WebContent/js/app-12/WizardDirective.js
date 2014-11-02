@@ -12,15 +12,24 @@
 
 			},
 			controller: function($scope) {
-				$scope.pages = [ {label: 'Choose product', link: '#!/select'}, 
-        				         {label: 'Your shopping bag', link: '#!/bag'},
-        				         {label: 'Your address', link : '#!/address'},
-        				         {label: 'Finish', link: '#!/finish'}];
+				$scope.pages = [ {
+					label : 'Choose product',
+					link : '#!/select'
+				}, {
+					label : 'Your shopping bag',
+					link : '#!/bag'
+				}, {
+					label : 'Your address',
+					link : '#!/address'
+				}, {
+					label : 'Finish',
+					link : '#!/finish'
+				} ];
 			},
 			restrict: 'E',
-			template: '<ul class="nav nav-pills" role="tablist">\
-						<li role="presentation" ng-repeat="p in pages"><a href="{{p.link}}">{{p.label}}</a></li>\
-					<ul>'
+			template: '<ul class="nav nav-pills" role="tablist">' +
+						'<li role="presentation" ng-repeat="p in pages"><a href="{{p.link}}">{{p.label}}</a></li>' +
+					'<ul>'
 		};
 	});	
 	
