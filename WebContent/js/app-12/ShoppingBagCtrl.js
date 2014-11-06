@@ -7,7 +7,7 @@
 		this.bag = {};
 		this.getBag = function() {
 			return this.bag;
-		}
+		};
 	})
 	.controller('ShoppingBagCtrl', ['$scope', 'BagService', 'ProductsFactory', function($scope, BagService, ProductsFactory) {
 		
