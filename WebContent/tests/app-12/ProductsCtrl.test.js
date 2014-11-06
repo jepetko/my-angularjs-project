@@ -1,18 +1,21 @@
 describe("products-ctrl", function() {
 		
-	var scope, controller, httpBackend, filter;
+	var rootScope, scope, controller, httpBackend, filter, _BagService;
 		
 	beforeEach(module('products-services'));
 	beforeEach(module('products-ctrl'));
 	
-	beforeEach(inject(function($rootScope, $controller, $httpBackend, $filter, ProductsFactory) {
+	beforeEach(inject(function($rootScope, $controller, $httpBackend, $filter, ProductsFactory, BagService) {
+		rootScope = $rootScope;
 		scope = $rootScope.$new();
 		controller = $controller('ProductsCtrl', {
 			'$scope': scope,
-			'ProductFactory': ProductsFactory
+			'ProductFactory': ProductsFactory,
+			'BagService': BagService
 		});
 		httpBackend = $httpBackend;
 		filter = $filter;
+		_BagService = BagService;
 		
 		httpBackend.whenGET('shop/products').respond(200,
  				[ {
@@ -54,6 +57,17 @@ describe("products-ctrl", function() {
 		it('should remove spaces', function() {
 			var filtered = filter('nospaces')('Quattro Stagioni');
 			expect(filtered).toEqual('QuattroStagioni');
+		});
+		
+		it('should add product to the bag', function() {
+			
+			scope.all();
+			httpBackend.flush();
+			
+			scope.bag["1"] = 7;
+			scope.$digest();
+			
+			expect(_BagService.getBag()).toEqual( jasmine.objectContaining({ 1: 7}) );
 		});
 	});	
 });

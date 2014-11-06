@@ -1,1 +1,5 @@
-test
+<div ng-controller="ShoppingBagCtrl">
+	<ul class="list-group">
+		<li ng-repeat="(id,count) in bag" class="list-group-item"><span class="badge">{{count}}</span> {{id}}</li>
+	</ul>
+</div>

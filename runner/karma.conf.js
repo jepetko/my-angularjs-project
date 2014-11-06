@@ -29,7 +29,7 @@ module.exports = function(config) {
             'js/app-12/ProductsCtrl.js',
             'js/app-12/ProductsFactory.js',
             'js/app-12/ShoppingApp.js',
-//            'js/app-12/ShoppingBagCtrl.js',
+            'js/app-12/ShoppingBagCtrl.js',
             'js/app-12/WizardDirective.js',
             
             //test cases:
