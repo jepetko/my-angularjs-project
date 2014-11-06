@@ -1,17 +1,18 @@
 describe("products-ctrl", function() {
 		
-	var scope, controller, httpBackend;
+	var scope, controller, httpBackend, filter;
 		
 	beforeEach(module('products-services'));
 	beforeEach(module('products-ctrl'));
 	
-	beforeEach(inject(function($rootScope, $controller, $httpBackend, ProductsFactory) {
+	beforeEach(inject(function($rootScope, $controller, $httpBackend, $filter, ProductsFactory) {
 		scope = $rootScope.$new();
 		controller = $controller('ProductsCtrl', {
 			'$scope': scope,
 			'ProductFactory': ProductsFactory
 		});
 		httpBackend = $httpBackend;
+		filter = $filter;
 		
 		httpBackend.whenGET('shop/products').respond(200,
  				[ {
@@ -49,6 +50,10 @@ describe("products-ctrl", function() {
 			httpBackend.flush();
 			expect(scope.products.length).toBe(6);			
 		});
-	});
-	
+		
+		it('should remove spaces', function() {
+			var filtered = filter('nospaces')('Quattro Stagioni');
+			expect(filtered).toEqual('QuattroStagioni');
+		});
+	});	
 });
