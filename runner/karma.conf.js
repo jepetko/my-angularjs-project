@@ -18,7 +18,8 @@ module.exports = function(config) {
             'js/angular-route.js',
             'js/angular-mocks.js',
             'js/jquery-1.11.1.min.js',
-            //code:
+            
+            //source code:
             'js/app-7/FruitsApp.js',
             //'js/app-8/WindowDirective.js',
             'js/app-9/TaskbarAndWindowDirective.js',
@@ -31,15 +32,20 @@ module.exports = function(config) {
             'js/app-12/ShoppingApp.js',
             'js/app-12/ShoppingBagCtrl.js',
             'js/app-12/WizardDirective.js',
+            'js/app-12/AddressCtrl.js',
             
-            //test cases:
+            //tests:
+            //FruitsApp (app-7)
             'tests/FruitsApp.test.js',
             //'tests/WindowDirective.test.js',
             'tests/TaskbarAndWindowDirective.test.js',
             'tests/HttpService.test.js',
             'tests/RestService.test.js',            
-            //app-12:
-            'tests/app-12/*.test.js'
+            //AwesomePizzeria (app-12)
+            'tests/app-12/*.test.js',
+            
+            //templates:
+            'templates/*.html'
         ],
 
 
@@ -55,6 +61,11 @@ module.exports = function(config) {
         htmlReporter: {
             outputFile: '../build/output.html',
             templatePath: __dirname+'/jasmine_template.html'
+        },
+        
+        // generate js files from html templates
+        preprocessors: {
+          'templates/*.html': 'ng-html2js'
         },
 
         // web server port

@@ -15,6 +15,7 @@
     "grunt-karma": "~0.9.0",
     "grunt-cli": "~0.1.13",
     "karma-html-reporter": "~0.2.4",
-    "karma-spec-reporter": "~0.0.13"
+    "karma-spec-reporter": "~0.0.13",
+    "karma-ng-html2js-preprocessor": "~0.1.2"
   }
 }
