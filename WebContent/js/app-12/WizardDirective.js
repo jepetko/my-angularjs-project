@@ -26,10 +26,12 @@
 					link : '#!/finish'
 				} ];
 			},
-			restrict: 'E',
-			template: '<ul class="nav nav-pills" role="tablist">' +
-						'<li role="presentation" ng-repeat="p in pages"><a href="{{p.link}}">{{p.label}}</a></li>' +
-					'<ul>'
+			restrict: 'E',			
+			template: '<div class="panel panel-default"><div class="panel-body">' +
+						'<ul class="nav nav-pills" role="tablist">' +
+							'<li role="presentation" ng-repeat="p in pages"><a href="{{p.link}}">{{p.label}}</a></li>' +
+						'<ul>' +
+					'</div></div>'
 		};
 	});	
 	
