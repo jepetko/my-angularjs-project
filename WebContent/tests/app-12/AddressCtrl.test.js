@@ -1,8 +1,7 @@
 describe('address-app', function() {
 	
 	var rootScope, scope, httpBackend, element;
-	
-	
+		
 	beforeEach(module('address-app'));	
 	beforeEach(module('templates/address.html'));
 	
@@ -29,6 +28,22 @@ describe('address-app', function() {
 			scope.addressForm.surname.$setViewValue('Golbang');
 			scope.$digest();			
 			expect(scope.addressForm.$invalid).toBe(true);						
+		});
+		
+		it('should be valid when the values are complete', function() {
+			var address = {firstname : 'Katarina', surname: 'Golbang', street: 'Some Street', no: 3, zip: '1020', city: 'Vienna', payment: 'Cash'};
+			angular.forEach(address, function(val,key) {
+				scope.addressForm[key].$setViewValue(val);
+			});
+			scope.$digest();			
+			expect(scope.addressForm.$invalid).toBe(false);						
+		});
+		
+		it('should show validity hint when value is inserted', function() {
+			scope.addressForm.firstname.$setViewValue('Katarina');
+			scope.$digest();
+			var hint = $(element).find('span').first();
+			expect(hint.css('display')).not.toBe('none');
 		});
 	});	
 });
