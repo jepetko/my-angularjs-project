@@ -30,12 +30,12 @@ describe('address-app', function() {
 			expect(scope.addressForm.$invalid).toBe(true);						
 		});
 		
-		it('should be valid when the values are complete', function() {
+		it('should be valid when the values are complete and we pay in cash', function() {
 			var address = {firstname : 'Katarina', surname: 'Golbang', street: 'Some Street', no: 3, zip: '1020', city: 'Vienna', payment: 'Cash'};
 			angular.forEach(address, function(val,key) {
 				scope.addressForm[key].$setViewValue(val);
 			});
-			scope.$digest();			
+			scope.$digest();	
 			expect(scope.addressForm.$invalid).toBe(false);						
 		});
 		
