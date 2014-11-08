@@ -1,100 +1,149 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<title>Examples</title>
-		<style type="text/css">
-			body {
-				font-family: Verdana, sans-serif;
-			}
-			h1 {
-				padding: 5px;
-			}
-			h1:hover {
-				background: lightgrey;
-				border-radius: 10px;
-			}
-			h1 > span {
-				font-weight: bold;
-				display: block;
-			}
-			a:visited {
-				color: red;
-			}
-		</style>
-	</head>
-	<body>
-		<h1>
-			<a href="app_1.html">app_1</a>
-			<span>
-				ng-app, Model
-			</span>
-		</h1>
-		<h1>
-			<a href="app_2.html">app_2</a>
-			<span>
-				ng-app, ng-controller, Model, Controller-Methode im Template aufrufen
-			</span>
-		</h1>
-		<h1>
-			<a href="app_3.html">app_3</a>
-			<span>
-				ng-app, ng-controller, click event
-			</span>
-		</h1>
-		<h1>
-			<a href="app_4.html">app_4</a>
-			<span>
-				ng-app, ng-controller, filter
-			</span>
-		</h1>
-		<h1>
-			<a href="app_5.html">app_5</a>
-			<span>
-				ng-app, ng-controller, eigenes HTML schreiben
-			</span>
-		</h1>
-		<h1>
-			<a href="app_6.html">app_6</a>
-			<span>
-				ng-app, ng-controller, &Auml;nderungen des Models beobachten
-			</span>
-		</h1>	
-		<h1>
-			<a href="app_7.html">app_7</a>
-			<span>
-				ng-app, ng-controller, Verwendung von Services
-			</span>
-		</h1>	
-		<h1>
-			<a href="app_8.html">app_8</a>
-			<span>
-				ng-app, ng-controller, Verwendung von Directives, wiederverwendbare Komponenten bauen
-			</span>
-		</h1>
-		<h1>
-			<a href="app_9.html">app_9</a>
-			<span>
-				ng-app, ng-controller, Verwendung von Directives, Integration von 2 Direktiven miteinander
-			</span>
-		</h1>											
-		<h1>
-			<a href="app_10.html">app_10</a>
-			<span>
-				ng-app, ng-controller, Verwendung von low level HTTP API ($http)
-			</span>
-		</h1>
-		<h1>
-			<a href="app_11.html">app_11</a>
-			<span>
-				ng-app, ng-controller, Verwendung von high level HTTP API ($resource)
-			</span>
-		</h1>
-		<h1>
-			<a href="app_12.html">app_12</a>
-			<span>
-				ng-app, ng-controller, Verwendung von HTML routing, templates, Integration mit directives und controllers
-			</span>
-		</h1>
-	</body>
+<head>
+<meta charset="UTF-8">
+<title>AngularJS Training by leanetic IT Consulting</title>
+<script src="js/jquery-1.11.1.min.js"></script>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet"
+	href="vendor/bootstrap/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<style type="text/css">
+.thumbnail {
+	font-size: 15pt;	
+}
+.label-primary {
+	font-weight: normal;
+	background-color: darkblue;
+}
+</style>
+</head>
+<body class="panel panel-default">
+	<div class="panel-heading">AngularJS by example</div>
+	<div class="panel-body">
+		<div>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="thumbnail">
+						<h1>2-Way-Binding</h1>
+						<a href="app_1.html">app_1</a>
+						<div>
+							<span class="label label-primary">ng-model</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="thumbnail">
+						<h1>
+							Dependency Injection von
+							<code>$scope</code>
+							&amp; Controller im Template aufrufen
+						</h1>
+						<a href="app_2.html">app_2</a>
+						<div>
+						<span class="label label-primary">ng-app</span>
+						<span class="label label-primary">ng-controller</span>
+						<span class="label label-primary">method() in template</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="thumbnail">
+						<h1>Event Handling dem Controller &uuml;berlassen</h1>
+						<a href="app_3.html">app_3</a>
+						<div>ng-app, ng-controller, click event</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="thumbnail">
+						<h1>Wert mit Filtern manipulieren</h1>
+						<a href="app_4.html">app_4</a>
+						<div>ng-app, ng-controller, filter</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="thumbnail">
+						<h1>Eigene Komponente schreiben</h1>
+						<a href="app_5.html">app_5</a>
+						<div>ng-app, ng-controller, eigenes HTML schreiben</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="thumbnail">
+						<h1>&quot;Observer&quot; zum Beobachten der
+							Wert-&Auml;nderung nutzen</h1>
+						<a href="app_6.html">app_6</a>
+						<div>ng-app, ng-controller, &Auml;nderungen des Models
+							beobachten</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="thumbnail">
+						<h1>Services f&uuml; Business Logic nutzen</h1>
+						<a href="app_7.html">app_7</a>
+						<div>ng-app, ng-controller, Verwendung von Services</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="thumbnail">
+						<h1>Wiederverwendbare Komponente schreiben &amp; Verwendung
+							von einem "isolated scope"</h1>
+						<a href="app_8.html">app_8</a>
+						<div>ng-app, ng-controller, Verwendung von Directives,
+							wiederverwendbare Komponenten bauen</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="thumbnail">
+						<h1>Wiederverwendbare Komponenten miteinander integrieren
+							&amp; deren Controller per Dependency Injection verwenden</h1>
+						<a href="app_9.html">app_9</a>
+						<div>ng-app, ng-controller, Verwendung von Directives,
+							Integration von 2 Direktiven miteinander</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="thumbnail">
+						<h1>
+							REST-Service via low level API
+							<code>$http</code>
+							integrieren
+						</h1>
+						<a href="app_10.html">app_10</a>
+						<div>ng-app, ng-controller, Verwendung von low level HTTP
+							API ($http)</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="thumbnail">
+						<h1>
+							REST-Service via high level API
+							<code>$resource</code>
+							integrieren &amp; Ergebnis in Komponenten mit "isolated scope"
+							und "local scope properties"
+						</h1>
+						<a href="app_11.html">app_11</a>
+						<div>ng-app, ng-controller, Verwendung von high level HTTP
+							API ($resource)</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="thumbnail">
+						<h1>Verwendung von HTML Routing und Partials &amp; Form
+							Validierungen</h1>
+						<a href="app_12.html">app_12</a>
+						<div>ng-app, ng-controller, Verwendung von HTML routing,
+							templates, Integration mit directives und controllers</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
 </html>
