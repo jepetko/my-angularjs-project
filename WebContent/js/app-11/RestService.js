@@ -46,7 +46,6 @@
 			scope: {
 				ranking: '@'
 			},
-			ranking : '@',
 			restrict: 'E',
 			controller: function($scope) {
 				$scope.rankingAsInt = function() {
