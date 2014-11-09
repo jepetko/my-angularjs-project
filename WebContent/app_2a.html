@@ -30,6 +30,7 @@
 	
 	<body ng-app="shared-ctrls-app">
 	
+		<h3>Using primitives:</h3>
 		<div ng-controller="ParentCtrl" class="parent">
 			Parent-Name: <input type="text" ng-model="name">
 			<div>Parent Name Value: <span>{{name}}</span></div>
@@ -37,9 +38,19 @@
 			<div ng-controller="ChildCtrl" class="child">
 				Child-Name: <input type="text" ng-model="name">
 				<div>Child Name Value: <span>{{name}}</span></div>			
-			</div>
-			
+			</div>			
 		</div>
+		
+		<h3>Using objects:</h3>
+		<div ng-controller="ParentCtrl" class="parent">
+			Parent-Name: <input type="text" ng-model="user.name">
+			<div>Parent Name Value: <span>{{user.name}}</span></div>
+			
+			<div ng-controller="ChildCtrl" class="child">
+				Child-Name: <input type="text" ng-model="user.name">
+				<div>Child Name Value: <span>{{user.name}}</span></div>			
+			</div>			
+		</div>		
 	</body>
 	
 </html>
