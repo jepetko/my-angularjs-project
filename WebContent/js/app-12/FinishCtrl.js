@@ -26,7 +26,7 @@
 		
 		$scope.getMessage = function() {
 			if(BagService.isEmpty()) {
-				return 'Your bag is empty. Please add some pizzas to your bag.'
+				return 'Your bag is empty. Please add some pizzas to your bag.';
 			}
 			var msg = 'Thank you for your order. Here is the summary: ';
 			var bag = BagService.getBag();
