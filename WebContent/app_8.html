@@ -5,12 +5,20 @@
 		<title>app_8</title>
 		<link type="text/css" rel="stylesheet" href="css/common.css">
 		<style type="text/css">
+		
+			*, html {
+				font-family: Arial, Verdana;
+			}
 
 			.ui-window {	
 				min-width: 300px;
 				min-height: 200px;	
 				display: inline-block;
 			}		
+			
+			.ui-window span {
+				color: black;
+			}
 			
 			.ui-window-header {
 				background: grey;
@@ -41,7 +49,7 @@
 		<script src="js/angular.min.js"></script>
       	<script src="js/app-8/WindowDirective.js"></script>
 	</head>
-	<body ng-app="ui">
+	<body ng-app="ui-simple-windows">
 		<window window-title="Info">
 			Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
 		</window>		

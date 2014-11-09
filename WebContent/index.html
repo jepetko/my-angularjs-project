@@ -18,9 +18,33 @@
 .thumbnail {
 	font-size: 15pt;	
 }
+.thumbnail > a::before {
+	content: '>> '
+}
 .label-primary {
 	font-weight: normal;
 	background-color: darkblue;
+}
+.badge {
+	font-size: 22pt;	
+}
+.panel-heading {
+	font-size: 22pt;
+}
+.copyright {
+	font-size: 22pt;
+	display: inline-block;
+	float: right;
+}
+.leanetic-logo {
+	display: inline-block;
+	background: url(img/leanetic.png) top right no-repeat;
+	background-size: contain;
+	width: 100px;
+}
+.leanetic-name {
+	display: inline-block;
+	font-size: 12pt;
 }
 </style>
 <script type="text/javascript">
@@ -45,12 +69,13 @@
 </script>
 </head>
 <body class="panel panel-default">
-	<div class="panel-heading">AngularJS by example</div>
+	<div class="panel-heading">AngularJS by example <div class="copyright"><div class="leanetic-logo">&nbsp;</div><div class="leanetic-name">&nbsp;&copy; leanetic IT Consulting</div></div></div>
 	<div class="panel-body">
 		<div>
 			<div class="row">
 				<div class="col-md-4">
 					<div class="thumbnail">
+						<h1><span class="badge">1</span></h1>
 						<h1>2-Way-Binding</h1>
 						<a href="app_1.html">app_1</a>
 						<div>
@@ -60,6 +85,7 @@
 				</div>
 				<div class="col-md-4">
 					<div class="thumbnail">
+						<h1><span class="badge">2</span></h1>					
 						<h1>
 							Dependency Injection von
 							<code>$scope</code>
@@ -75,6 +101,7 @@
 				</div>
 				<div class="col-md-4">
 					<div class="thumbnail">
+						<h1><span class="badge">2a</span></h1>					
 						<h1>
 							Shared Controllers und Umgang mit Scopes
 						</h1>
@@ -90,6 +117,7 @@
 				
 				<div class="col-md-4">
 					<div class="thumbnail">
+						<h1><span class="badge">3</span></h1>					
 						<h1>Event Handling dem Controller &uuml;berlassen</h1>
 						<a href="app_3.html">app_3</a>
 						<div>
@@ -101,6 +129,7 @@
 				</div>
 				<div class="col-md-4">
 					<div class="thumbnail">
+						<h1><span class="badge">4</span></h1>					
 						<h1>Wert mit Filtern manipulieren</h1>
 						<a href="app_4.html">app_4</a>
 						<div>
@@ -112,6 +141,7 @@
 				</div>
 				<div class="col-md-4">
 					<div class="thumbnail">
+						<h1><span class="badge">5</span></h1>					
 						<h1>Eigene Komponente schreiben</h1>
 						<a href="app_5.html">app_5</a>
 						<div>
@@ -124,6 +154,7 @@
 				</div>
 				<div class="col-md-4">
 					<div class="thumbnail">
+						<h1><span class="badge">6</span></h1>					
 						<h1>&quot;Observer&quot; zum Beobachten der
 							Wert-&Auml;nderung nutzen</h1>
 						<a href="app_6.html">app_6</a>
@@ -139,6 +170,7 @@
 				</div>
 				<div class="col-md-4">
 					<div class="thumbnail">
+						<h1><span class="badge">7</span></h1>					
 						<h1>Services f&uuml; Business Logic nutzen</h1>
 						<a href="app_7.html">app_7</a>
 						<div>
@@ -150,6 +182,7 @@
 				</div>
 				<div class="col-md-4">
 					<div class="thumbnail">
+						<h1><span class="badge">8</span></h1>					
 						<h1>Wiederverwendbare Komponente schreiben &amp; Verwendung
 							von einem "isolated scope"</h1>
 						<a href="app_8.html">app_8</a>
@@ -163,6 +196,7 @@
 				</div>
 				<div class="col-md-4">
 					<div class="thumbnail">
+						<h1><span class="badge">9</span></h1>					
 						<h1>Wiederverwendbare Komponenten miteinander integrieren
 							&amp; deren Controller per Dependency Injection verwenden</h1>
 						<a href="app_9.html">app_9</a>
@@ -176,6 +210,7 @@
 				</div>
 				<div class="col-md-4">
 					<div class="thumbnail">
+						<h1><span class="badge">10</span></h1>					
 						<h1>
 							REST-Service via low level API
 							<code>$http</code>
@@ -192,6 +227,7 @@
 				</div>
 				<div class="col-md-4">
 					<div class="thumbnail">
+						<h1><span class="badge">11</span></h1>					
 						<h1>
 							REST-Service via high level API
 							<code>$resource</code>
@@ -210,6 +246,7 @@
 				</div>
 				<div class="col-md-4">
 					<div class="thumbnail">
+						<h1><span class="badge">12</span></h1>					
 						<h1>Verwendung von HTML Routing und Partials &amp; Form
 							Validierungen</h1>
 						<a href="app_12.html">app_12</a>

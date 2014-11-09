@@ -15,7 +15,11 @@
 			span {
 				font-weight: bold;
 				text-decoration: underline;
-			}      		
+			}     
+			p {
+				font-size: 10pt;
+				font-style: italic;
+			} 		
 			.parent {
 				background: lightgreen;
 				border: 2px solid green;
@@ -37,7 +41,8 @@
 			
 			<div ng-controller="ChildCtrl" class="child">
 				Child-Name: <input type="text" ng-model="name">
-				<div>Child Name Value: <span>{{name}}</span></div>			
+				<div>Child Name Value: <span>{{name}}</span></div>				
+				<p>Hint: use <code>$parent.</code></p>			
 			</div>			
 		</div>
 		
