@@ -20,13 +20,22 @@ module.exports = function(config) {
             'js/jquery-1.11.1.min.js',
             
             //source code:
+            //app-7
             'js/app-7/FruitsApp.js',
+            
+            //app-8
             //'js/app-8/WindowDirective.js',
+            
+            //app-9
             'js/app-9/TaskbarAndWindowDirective.js',
+            
+            //app-10
             'js/app-10/HttpService.js',
+            
+            //app-11
             'js/app-11/RestService.js',
+            
             //app-12:
-//            'js/app-12/OrderCtrl.js',
             'js/app-12/ProductsCtrl.js',
             'js/app-12/ProductsFactory.js',
             'js/app-12/ShoppingApp.js',
@@ -35,13 +44,22 @@ module.exports = function(config) {
             'js/app-12/AddressCtrl.js',
             
             //tests:
-            //FruitsApp (app-7)
+            //app-7:
             'tests/FruitsApp.test.js',
+            
+            //app-8:
             //'tests/WindowDirective.test.js',
+            
+            //app-9:
             'tests/TaskbarAndWindowDirective.test.js',
+            
+            //app-10:            
             'tests/HttpService.test.js',
-            'tests/RestService.test.js',            
-            //AwesomePizzeria (app-12)
+            
+            //app-11:
+            'tests/RestService.test.js',
+            
+            //app-12:
             'tests/app-12/*.test.js',
             
             //templates:
