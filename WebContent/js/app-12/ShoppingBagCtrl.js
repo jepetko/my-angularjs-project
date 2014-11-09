@@ -8,6 +8,12 @@
 		this.getBag = function() {
 			return this.bag;
 		};
+		this.isEmpty = function() {
+			for(var key in this.bag) {
+				return false;
+			}
+			return true;
+		};
 	})
 	.controller('ShoppingBagCtrl', ['$scope', 'BagService', 'ProductsFactory', function($scope, BagService, ProductsFactory) {
 		

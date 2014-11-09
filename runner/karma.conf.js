@@ -42,6 +42,7 @@ module.exports = function(config) {
             'js/app-12/ShoppingBagCtrl.js',
             'js/app-12/WizardDirective.js',
             'js/app-12/AddressCtrl.js',
+            'js/app-12/FinishCtrl.js',
             
             //tests:
             //app-7:
