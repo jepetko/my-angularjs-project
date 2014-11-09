@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>app_2a</title>
+		<link type="text/css" rel="stylesheet" href="css/common.css">
+				     
+		<script src="js/angular.min.js"></script>
+      	<script src="js/app-2a/SharedCtrlApp.js"></script>
+      	<style type="text/css">
+      		div {
+      			padding: 10px;
+      			margin: 10px;
+      		}
+			span {
+				font-weight: bold;
+				text-decoration: underline;
+			}      		
+			.parent {
+				background: lightgreen;
+				border: 2px solid green;
+			}
+			
+			.child {
+				background: lightblue;
+				border: 2px solid blue;			
+			}      				
+      	</style>
+	</head>
+	
+	<body ng-app="shared-ctrls-app">
+	
+		<div ng-controller="ParentCtrl" class="parent">
+			Parent-Name: <input type="text" ng-model="name">
+			<div>Parent Name Value: <span>{{name}}</span></div>
+			
+			<div ng-controller="ChildCtrl" class="child">
+				Child-Name: <input type="text" ng-model="name">
+				<div>Child Name Value: <span>{{name}}</span></div>			
+			</div>
+			
+		</div>
+	</body>
+	
+</html>
