@@ -23,6 +23,26 @@
 	background-color: darkblue;
 }
 </style>
+<script type="text/javascript">
+(function($) {
+	
+	$( document ).ready(function() {
+		var max = -1;
+	    $(".thumbnail").map(function() {
+	    	var h = $(this).height();
+	    	if(max === -1) {
+	    		max = h;
+	    	} else {
+	    		if(h>max) {
+	    			max = h;
+	    		}
+	    	}
+	    });
+	    $(".thumbnail").height(max);
+	});
+	
+})(jQuery);
+</script>
 </head>
 <body class="panel panel-default">
 	<div class="panel-heading">AngularJS by example</div>
@@ -57,21 +77,34 @@
 					<div class="thumbnail">
 						<h1>Event Handling dem Controller &uuml;berlassen</h1>
 						<a href="app_3.html">app_3</a>
-						<div>ng-app, ng-controller, click event</div>
+						<div>
+						<span class="label label-primary">ng-app</span>
+						<span class="label label-primary">ng-controller</span>
+						<span class="label label-primary">click handler</span>
+						</div>						
 					</div>
 				</div>
 				<div class="col-md-4">
 					<div class="thumbnail">
 						<h1>Wert mit Filtern manipulieren</h1>
 						<a href="app_4.html">app_4</a>
-						<div>ng-app, ng-controller, filter</div>
+						<div>
+						<span class="label label-primary">ng-app</span>
+						<span class="label label-primary">ng-controller</span>
+						<span class="label label-primary">filter</span>
+						</div>												
 					</div>
 				</div>
 				<div class="col-md-4">
 					<div class="thumbnail">
 						<h1>Eigene Komponente schreiben</h1>
 						<a href="app_5.html">app_5</a>
-						<div>ng-app, ng-controller, eigenes HTML schreiben</div>
+						<div>
+						<span class="label label-primary">ng-app</span>
+						<span class="label label-primary">ng-controller</span>
+						<span class="label label-primary">directive</span>
+						<span class="label label-primary">eigenes HTML markup schreiben</span>
+						</div>												
 					</div>
 				</div>
 				<div class="col-md-4">
@@ -79,15 +112,25 @@
 						<h1>&quot;Observer&quot; zum Beobachten der
 							Wert-&Auml;nderung nutzen</h1>
 						<a href="app_6.html">app_6</a>
-						<div>ng-app, ng-controller, &Auml;nderungen des Models
-							beobachten</div>
+						<div>
+						<span class="label label-primary">ng-app</span>
+						<span class="label label-primary">ng-controller</span>
+						<span class="label label-primary">$watch</span>
+						<span class="label label-primary">&Auml;nderungen des Models
+							beobachten</span>
+						</div>												
+							
 					</div>
 				</div>
 				<div class="col-md-4">
 					<div class="thumbnail">
 						<h1>Services f&uuml; Business Logic nutzen</h1>
 						<a href="app_7.html">app_7</a>
-						<div>ng-app, ng-controller, Verwendung von Services</div>
+						<div>
+						<span class="label label-primary">ng-app</span>
+						<span class="label label-primary">ng-controller</span>
+						<span class="label label-primary">service</span>
+						</div>																		
 					</div>
 				</div>
 				<div class="col-md-4">
@@ -95,8 +138,12 @@
 						<h1>Wiederverwendbare Komponente schreiben &amp; Verwendung
 							von einem "isolated scope"</h1>
 						<a href="app_8.html">app_8</a>
-						<div>ng-app, ng-controller, Verwendung von Directives,
-							wiederverwendbare Komponenten bauen</div>
+						<div>
+						<span class="label label-primary">ng-app</span>
+						<span class="label label-primary">ng-controller</span>
+						<span class="label label-primary">directive</span>
+						<span class="label label-primary">scope: {}</span>
+						</div>							
 					</div>
 				</div>
 				<div class="col-md-4">
@@ -104,8 +151,12 @@
 						<h1>Wiederverwendbare Komponenten miteinander integrieren
 							&amp; deren Controller per Dependency Injection verwenden</h1>
 						<a href="app_9.html">app_9</a>
-						<div>ng-app, ng-controller, Verwendung von Directives,
-							Integration von 2 Direktiven miteinander</div>
+						<div>
+						<span class="label label-primary">ng-app</span>
+						<span class="label label-primary">ng-controller</span>
+						<span class="label label-primary">directive</span>
+						<span class="label label-primary">scope: {}</span>
+						</div>														
 					</div>
 				</div>
 				<div class="col-md-4">
@@ -116,8 +167,12 @@
 							integrieren
 						</h1>
 						<a href="app_10.html">app_10</a>
-						<div>ng-app, ng-controller, Verwendung von low level HTTP
-							API ($http)</div>
+						<div>
+						<span class="label label-primary">ng-app</span>
+						<span class="label label-primary">ng-controller</span>
+						<span class="label label-primary">REST</span>
+						<span class="label label-primary">$http</span>
+						</div>																					
 					</div>
 				</div>
 				<div class="col-md-4">
@@ -129,8 +184,13 @@
 							und "local scope properties"
 						</h1>
 						<a href="app_11.html">app_11</a>
-						<div>ng-app, ng-controller, Verwendung von high level HTTP
-							API ($resource)</div>
+						<div>
+						<span class="label label-primary">ng-app</span>
+						<span class="label label-primary">ng-controller</span>
+						<span class="label label-primary">directive</span>
+						<span class="label label-primary">scope: { property : '@', property : '&amp;'}</span>
+						<span class="label label-primary">$resource</span>
+						</div>							
 					</div>
 				</div>
 				<div class="col-md-4">
@@ -140,6 +200,20 @@
 						<a href="app_12.html">app_12</a>
 						<div>ng-app, ng-controller, Verwendung von HTML routing,
 							templates, Integration mit directives und controllers</div>
+						<div>
+						<span class="label label-primary">bootstrap (anstatt von ng-app)</span>
+						<span class="label label-primary">ng-controller</span>
+						<span class="label label-primary">directive</span>
+						<span class="label label-primary">scope: { property : '@'}</span>
+						<span class="label label-primary">$resource</span>
+						<span class="label label-primary">require</span>
+						<span class="label label-primary">custom validation mit $parsers (ngModel)</span>
+						<span class="label label-primary">ngRoute</span>
+						<span class="label label-primary">ngResource</span>
+						<span class="label label-primary">factory</span>
+						<span class="label label-primary">$routeProvider</span>
+						<span class="label label-primary">$locationProvider</span>
+						</div>							
 					</div>
 				</div>
 			</div>
