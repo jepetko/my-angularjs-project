@@ -1,4 +1,4 @@
-angular.module('ui', [])
+angular.module('ui-simple-windows', [])
 .directive('window', function() {	
 	
 	var link = function(scope, el, attrs) {

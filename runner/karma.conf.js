@@ -24,7 +24,7 @@ module.exports = function(config) {
             'js/app-7/FruitsApp.js',
             
             //app-8
-            //'js/app-8/WindowDirective.js',
+            'js/app-8/WindowDirective.js',
             
             //app-9
             'js/app-9/TaskbarAndWindowDirective.js',
@@ -48,7 +48,7 @@ module.exports = function(config) {
             'tests/FruitsApp.test.js',
             
             //app-8:
-            //'tests/WindowDirective.test.js',
+            'tests/WindowDirective.test.js',
             
             //app-9:
             'tests/TaskbarAndWindowDirective.test.js',

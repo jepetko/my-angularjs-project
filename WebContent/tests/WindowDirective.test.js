@@ -1,13 +1,13 @@
-describe('ui.WindowDirective', function() {
+describe('ui-simple-windows', function() {
 	var scope, element, compile;
 	
 	function compileTpl(tpl, windowTitle) {
 		tpl = '<window window-title="' + (windowTitle || 'info') + '">' + tpl + '</window>';		
-		element = compile(tpl)(scope);
+		element = compile(tpl)(scope);		
 		scope.$digest();
 	}
 	
-	beforeEach(module('ui'));
+	beforeEach(module('ui-simple-windows'));
 	
 	describe('WindowDirective', function() {
 		
