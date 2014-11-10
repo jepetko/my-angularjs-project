@@ -1,7 +1,7 @@
 describe('ui', function() {
 	
 	//dependency injections
-	var rootScope, scope, element, compile, timeout, taskBarCtrl;
+	var rootScope, scope, element, compile, timeout, TaskBarCtrl;
 	
 	//testables
 	var taskBar;
@@ -14,7 +14,7 @@ describe('ui', function() {
 		</task-bar>';
 	
 	function compileTpl(tpl) {
-		var link = compile(tpl, taskBarCtrl);
+		var link = compile(tpl, TaskBarCtrl);
 		var element = link(scope);
 		scope.$digest();		
 		return element;
@@ -27,7 +27,7 @@ describe('ui', function() {
 		scope = $rootScope.$new();
 		compile = $compile;
 		timeout = $timeout;
-		taskBarCtrl = $controller('taskBarCtrl', {
+		TaskBarCtrl = $controller('TaskBarCtrl', {
 			'$scope': scope
 		});		
 	}));
@@ -55,7 +55,7 @@ describe('ui', function() {
 			expect( $(taskBar).find('li').length ).toBe(3);
 		});
 		
-		it('should have buttons with catption window N', function() {
+		it('should have buttons with caption window N', function() {
 			taskBar = compileTpl(tpl);
 			var i = 0;
 			angular.forEach($(taskBar).find('li'), function(li) {
