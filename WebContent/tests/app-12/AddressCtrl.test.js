@@ -1,15 +1,16 @@
 describe('address-app', function() {
 	
-	var rootScope, scope, httpBackend, element;
+	var rootScope, scope, httpBackend, element, location;
 		
 	beforeEach(module('address-app'));	
 	beforeEach(module('templates/address.html'));
 	
-	beforeEach(inject(function($rootScope, $controller, $compile, $templateCache) {
+	beforeEach(inject(function($rootScope, $controller, $compile, $templateCache, $location) {
 		template = $templateCache.get('templates/address.html');
 		var link = $compile(template);
 		element = link($rootScope.$new());
 		scope = angular.element(element).scope();
+		location = $location;
 	}));
 	
 	describe('AddressCtrl', function() {		
@@ -27,7 +28,10 @@ describe('address-app', function() {
 		it('should be invalid when the values are not complete', function() {
 			scope.addressForm.surname.$setViewValue('Golbang');
 			scope.$digest();			
-			expect(scope.addressForm.$invalid).toBe(true);						
+			expect(scope.addressForm.$invalid).toBe(true);		
+			
+			var btnSubmit = $(element).find('button');
+			expect(btnSubmit.attr('disabled')).toBe('disabled');
 		});
 		
 		it('should be valid when the values are complete and we pay in cash', function() {
@@ -36,7 +40,10 @@ describe('address-app', function() {
 				scope.addressForm[key].$setViewValue(val);
 			});
 			scope.$digest();	
-			expect(scope.addressForm.$invalid).toBe(false);						
+			expect(scope.addressForm.$invalid).toBe(false);	
+			
+			var btnSubmit = $(element).find('button');
+			expect(btnSubmit.attr('disabled')).toBeUndefined();
 		});
 		
 		it('should show validity hint when value is inserted', function() {
@@ -44,6 +51,18 @@ describe('address-app', function() {
 			scope.$digest();
 			var hint = $(element).find('span').first();
 			expect(hint.css('display')).not.toBe('none');
+		});
+		
+		it('should route to the last tab when form is submitted', function() {
+			var address = {firstname : 'Katarina', surname: 'Golbang', street: 'Some Street', no: 3, zip: '1020', city: 'Vienna', payment: 'Cash'};
+			angular.forEach(address, function(val,key) {
+				scope.addressForm[key].$setViewValue(val);
+			});
+			scope.$digest();	
+			expect(scope.addressForm.$invalid).toBe(false);	
+			
+			scope.submit();
+			expect(location.path().substring(1)).toEqual('templates/finish.html');
 		});
 	});	
 });
