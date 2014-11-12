@@ -1,4 +1,4 @@
-package com.itexperts.rest.shop;
+package com.ng.rest.shop;
 
 public class Product {
 

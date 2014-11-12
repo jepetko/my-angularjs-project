@@ -1,4 +1,4 @@
-package com.itexperts.rest.company;
+package com.ng.rest.company;
 
 public enum Department {
 	MARKETING,

@@ -1,4 +1,4 @@
-package com.itexperts.rest;
+package com.ng.rest;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;

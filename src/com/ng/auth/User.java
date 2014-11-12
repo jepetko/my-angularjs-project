@@ -1,4 +1,4 @@
-package com.itexperts.auth;
+package com.ng.auth;
 
 import javax.xml.bind.annotation.XmlRootElement;
 

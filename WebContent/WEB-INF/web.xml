@@ -14,7 +14,7 @@
     <servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
     <init-param>
       <param-name>jersey.config.server.provider.packages</param-name>
-      <param-value>com.itexperts.rest</param-value>
+      <param-value>com.ng.rest</param-value>
     </init-param>
     <init-param>
       <param-name>jersey.config.server.provider.classnames</param-name>
@@ -31,7 +31,7 @@
     <servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
     <init-param>
       <param-name>jersey.config.server.provider.packages</param-name>
-      <param-value>com.itexperts.rest</param-value>
+      <param-value>com.ng.rest</param-value>
     </init-param>
     <init-param>
       <param-name>jersey.config.server.provider.classnames</param-name>
@@ -50,7 +50,7 @@
     <servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
     <init-param>
       <param-name>jersey.config.server.provider.packages</param-name>
-      <param-value>com.itexperts.rest</param-value>
+      <param-value>com.ng.rest</param-value>
     </init-param>
     <init-param>
       <param-name>jersey.config.server.provider.classnames</param-name>
@@ -66,7 +66,7 @@
   <!--  login  -->
   <servlet>
     <servlet-name>LoginServlet</servlet-name>
-    <servlet-class>com.itexperts.auth.LoginServlet</servlet-class>
+    <servlet-class>com.ng.auth.LoginServlet</servlet-class>
     <load-on-startup>1</load-on-startup>
   </servlet>  
   <servlet-mapping>
