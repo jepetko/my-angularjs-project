@@ -6,7 +6,7 @@ describe('address-app', function() {
 	beforeEach(module('templates/address.html'));
 	
 	beforeEach(inject(function($rootScope, $controller, $compile, $templateCache, $location) {
-		template = $templateCache.get('templates/address.html');
+		var template = $templateCache.get('templates/address.html');
 		var link = $compile(template);
 		element = link($rootScope.$new());
 		scope = angular.element(element).scope();
@@ -62,7 +62,7 @@ describe('address-app', function() {
 			expect(scope.addressForm.$invalid).toBe(false);	
 			
 			scope.submit();
-			expect(location.path().substring(1)).toEqual('templates/finish.html');
+			expect(location.path().substring(1)).toEqual('finish');
 		});
 	});	
 });
